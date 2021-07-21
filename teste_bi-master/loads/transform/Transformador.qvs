@@ -1,0 +1,109 @@
+﻿///$tab Main
+SET ThousandSep=',';
+SET DecimalSep='.';
+SET MoneyThousandSep=',';
+SET MoneyDecimalSep='.';
+SET MoneyFormat='$#,##0.00;-$#,##0.00';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='M/D/YYYY';
+SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='en-US';
+SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
+SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December';
+SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
+SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday';
+
+///$tab CNAE
+CNAE_Temp:
+LOAD 
+cd_cnpj, 
+subfield(nu_ordem,'@',iterno()) 		 as nu_ordem,
+subfield(cd_ramo_atividade,'@',iterno()) as cd_ramo_atividade, 
+subfield(de_ramo_atividade,'@',iterno()) as de_ramo_atividade
+
+FROM [E:\teste_bi-master\files\dataMirrors\CNAE.qvd](qvd)
+while not isnull(subfield(nu_ordem,'@',iterno()));
+
+CNAE:
+LOAD
+cd_cnpj							  		 as [LinkEmpresa],
+PurgeChar(nu_ordem,'~') 		  		 as [CNAE - nu_ordem],
+PurgeChar(cd_ramo_atividade	,'~') 		 as [CNAE - Cod Ramo Atividade],
+PurgeChar(de_ramo_atividade,'~')  		 as [CNAE - Desc Ramo Atividade],
+left(PurgeChar(cd_ramo_atividade,'~'),2) as [LinkRamoAtividade]
+Resident CNAE_Temp;
+store CNAE into E:\teste_bi-master\files\dataTransformed\CNAE.qvd;
+
+drop Table CNAE_Temp;
+
+drop Table CNAE;
+///$tab Dimensoes
+Natureza_Juridica:
+LOAD [Empresa - Codigo Natureza Juridica]    as LinkNaturezaJuridica, 
+	 [Empresa - Codigo Natureza Juridica]    as [Codigo Natureza Juridica], 
+     [Empresa - Descricao Natureza Juridica] as [Descricao Natureza Juridica],
+     [Empresa - Class Natureza Juridica]     as [Classificacao Natureza Juridica]
+FROM [E:\teste_bi-master\files\dataMirrors\Empresa.qvd](qvd);
+store Natureza_Juridica into E:\teste_bi-master\loads\dataCloud\Dim_Natureza_Juridica.qvd;
+drop table Natureza_Juridica;
+
+Empresa:
+LOAD [Empresa - Codigo Natureza Juridica] as LinkNaturezaJuridica, 
+     [Empresa - CNPJ] 					  as LinkEmpresa, 
+     [Empresa - Razao Social],
+     [Empresa - Filial/Matriz], 
+     [Empresa - Data Abertura], 
+     [Empresa - Situacao], 
+     [Empresa - Rua],
+     [Empresa - Numero], 
+     [Empresa - Bairro], 
+     [Empresa - Cidade], 
+     [Empresa - Estado],
+     [Empresa - Cep] 
+FROM [E:\teste_bi-master\files\dataMirrors\Empresa.qvd](qvd);
+store Empresa into E:\teste_bi-master\loads\dataCloud\Dim_Empresa.qvd;
+drop table Empresa;
+
+CNAE:
+LOAD [LinkEmpresa], 
+	 [CNAE - nu_ordem],
+     [CNAE - Cod Ramo Atividade]   as [Codigo Ramo de Atividade], 
+     [CNAE - Desc Ramo Atividade]  as [Descricao Ramo de Atividade], 
+     LinkRamoAtividade
+FROM [E:\teste_bi-master\files\dataTransformed\CNAE.qvd](qvd);
+store CNAE into E:\teste_bi-master\loads\dataCloud\Dim_CNAE.qvd;
+drop table CNAE;
+
+Setor:
+LOAD [Ramo de Atividade] as [Descricao Setor Atividade], 
+     [Setor - Divisoes]  as [Divisao Setor], 
+     LinkRamoAtividade
+FROM [E:\teste_bi-master\files\dataMirrors\Setores.qvd](qvd);
+store Setor into E:\teste_bi-master\loads\dataCloud\Dim_Setor.qvd;
+drop table Setor;
+
+
+
+
+
+///$tab Fato
+Fato_Empresas:
+LOAD cd_cnpj 				   as LinkEmpresa, 
+     vl_latitude 			   as Latitude, 
+     vl_longitude 			   as Longitude, 
+     vl_total_veiculos_antt    as [Total Veiculos ANTT], 
+     vl_total_veiculos_leves   as [Total Veiculos Leves], 
+     vl_total_veiculos_pesados as [Total Veiculos Pesados], 
+     fl_optante_simples 	   as [Optante Simples?], 
+     qt_filial 				   as [Qtde Filial], 
+     fl_optante_simei 		   as [Optante Simei?], 
+     de_saude_tributaria 	   as [Saude Tributaria], 
+     de_nivel_atividade        as [Nivel Atividade]
+FROM [E:\teste_bi-master\files\spreadsheets\empresasCalc.csv]
+(txt, utf8, embedded labels, delimiter is ';', msq);
+store Fato_Empresas into E:\teste_bi-master\loads\dataCloud\Fato_Empresas.qvd;
+drop Table Fato_Empresas;

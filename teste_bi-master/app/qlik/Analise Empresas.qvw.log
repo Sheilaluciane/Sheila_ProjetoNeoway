@@ -1,0 +1,190 @@
+﻿2021-07-20 15:04:19      Execução iniciada.
+2021-07-20 15:04:19      QlikView Desktop Version      12.40.20100+2019-06-05 16:55:31+e65903c
+2021-07-20 15:04:19      CPU Target                    x64
+2021-07-20 15:04:19      Operating System              Windows Server 2016 Standard  (64 bit edition)
+2021-07-20 15:04:19      Wow64 mode                    Not using Wow64
+2021-07-20 15:04:19      Language                      0409 English English
+2021-07-20 15:04:19      Country                       USA United States United States
+2021-07-20 15:04:19      MDAC Version                  6.3.9600.16384
+2021-07-20 15:04:19      MDAC Full Install Version     6.3.9600.16384
+2021-07-20 15:04:19      PreferredCompression          2
+2021-07-20 15:04:19      EnableParallelReload          1
+2021-07-20 15:04:19      ParallelizeQvdLoads           1
+2021-07-20 15:04:19      AutoSaveAfterReload           0
+2021-07-20 15:04:19      BackupBeforeReload            0
+2021-07-20 15:04:19      EnableFlushLog                0
+2021-07-20 15:04:19      UserLogfileCharset            65001
+2021-07-20 15:04:19      OdbcLoginTimeout              -1
+2021-07-20 15:04:19      OdbcConnectionTimeout         -1
+2021-07-20 15:04:19      LongestPossibleLine           1048576
+2021-07-20 15:04:19      MaxCoreMask                   -1
+2021-07-20 15:04:19      WebFileTimeout                0
+2021-07-20 15:04:19      WebFileUserAgent              Mozilla/5.0
+2021-07-20 15:04:19      DontUseInternetCache          1
+2021-07-20 15:04:19      ScriptWantsDbWrite            false
+2021-07-20 15:04:19      ScriptWantsExe                false
+2021-07-20 15:04:19      ICU_FOR_CHARACTER_CLASSIFICATION true
+2021-07-20 15:04:19      ICU_FOR_CODE_PAGES            true
+2021-07-20 15:04:19      ICU_FOR_COLLATION             true
+2021-07-20 15:04:19      ICU_FOR_LOCALE_INFO           true
+2021-07-20 15:04:19      ICU_FOR_SUPPORT_INFO          true
+2021-07-20 15:04:19      ICU_FOR_TIME_ZONE_INFO        true
+2021-07-20 15:04:19      LogFile CodePage Used:        65001
+2021-07-20 15:04:19      UseMemoryFillPattern          1
+2021-07-20 15:04:19      ScriptMode                    Legacy (gives greater system access) (aka qv11 mode)
+2021-07-20 15:04:19      SequentialThreadCount         81
+2021-07-20 15:04:19      NumberOfCores (effective)     20
+2021-07-20 15:04:19      ReloadCodebase                Bnf
+2021-07-20 15:04:20      Reload ID                     45cfc581-ada6-4342-9d5e-7bc87789b35c
+2021-07-20 15:04:20      Reload Executed By            QLIKVIEW\adminqlik1
+2021-07-20 15:04:20      Process Executing             QlikView Desktop
+2021-07-20 15:04:20      Process ID                    40384
+2021-07-20 15:04:20      Grpc version                  6.0.0
+2021-07-20 15:04:20      Protobuf version              3.6.1
+2021-07-20 15:04:20 0002 SET ThousandSep=','
+2021-07-20 15:04:20 0003 SET DecimalSep='.'
+2021-07-20 15:04:20 0004 SET MoneyThousandSep=','
+2021-07-20 15:04:20 0005 SET MoneyDecimalSep='.'
+2021-07-20 15:04:20 0006 SET MoneyFormat='$#,##0.00;-$#,##0.00'
+2021-07-20 15:04:20 0007 SET TimeFormat='h:mm:ss TT'
+2021-07-20 15:04:20 0008 SET DateFormat='M/D/YYYY'
+2021-07-20 15:04:20 0009 SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT'
+2021-07-20 15:04:20 0010 SET FirstWeekDay=6
+2021-07-20 15:04:20 0011 SET BrokenWeeks=1
+2021-07-20 15:04:20 0012 SET ReferenceDay=0
+2021-07-20 15:04:20 0013 SET FirstMonthOfYear=1
+2021-07-20 15:04:20 0014 SET CollationLocale='en-US'
+2021-07-20 15:04:20 0015 SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+2021-07-20 15:04:20 0016 SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December'
+2021-07-20 15:04:20 0017 SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+2021-07-20 15:04:20 0018 SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday'
+2021-07-20 15:04:20 0021 Empresa:
+2021-07-20 15:04:20 0022 LOAD LinkNaturezaJuridica, 
+2021-07-20 15:04:20 0023      LinkEmpresa, 
+2021-07-20 15:04:20 0024      [Empresa - Razao Social], 
+2021-07-20 15:04:20 0025      [Empresa - Filial/Matriz], 
+2021-07-20 15:04:20 0026      if([Empresa - Filial/Matriz]='1','Matriz','Filial') as [Empresa - Tipo],
+2021-07-20 15:04:20 0027      [Empresa - Data Abertura], 
+2021-07-20 15:04:20 0028      [Empresa - Situacao], 
+2021-07-20 15:04:20 0029      [Empresa - Rua], 
+2021-07-20 15:04:20 0030      [Empresa - Numero], 
+2021-07-20 15:04:20 0031      [Empresa - Bairro], 
+2021-07-20 15:04:20 0032      [Empresa - Cidade], 
+2021-07-20 15:04:20 0033      [Empresa - Estado], 
+2021-07-20 15:04:20 0034      [Empresa - Cep]
+2021-07-20 15:04:20 0035 FROM [E:\teste_bi-master\loads\dataCloud\Dim_Empresa.qvd](qvd)
+2021-07-20 15:04:20      	13 campos encontrados: LinkNaturezaJuridica, LinkEmpresa, Empresa - Razao Social, Empresa - Filial/Matriz, Empresa - Tipo, Empresa - Data Abertura, Empresa - Situacao, Empresa - Rua, Empresa - Numero, Empresa - Bairro, Empresa - Cidade, Empresa - Estado, Empresa - Cep, 
+2021-07-20 15:04:20      10,000 registros lidos
+2021-07-20 15:04:20 0037 Natureza_Juridica:
+2021-07-20 15:04:20 0038 LOAD LinkNaturezaJuridica, 
+2021-07-20 15:04:20 0039      [Codigo Natureza Juridica], 
+2021-07-20 15:04:20 0040      [Descricao Natureza Juridica], 
+2021-07-20 15:04:20 0041      [Classificacao Natureza Juridica]
+2021-07-20 15:04:20 0042 FROM [E:\teste_bi-master\loads\dataCloud\Dim_Natureza_Juridica.qvd](qvd)
+2021-07-20 15:04:20      	4 campos encontrados: LinkNaturezaJuridica, Codigo Natureza Juridica, Descricao Natureza Juridica, Classificacao Natureza Juridica, 
+2021-07-20 15:04:20      10,000 registros lidos
+2021-07-20 15:04:20 0044 CNAE:
+2021-07-20 15:04:20 0045 LOAD LinkEmpresa, 
+2021-07-20 15:04:20 0046 	 [CNAE - nu_ordem],
+2021-07-20 15:04:20 0047      [Codigo Ramo de Atividade], 
+2021-07-20 15:04:20 0048      [Descricao Ramo de Atividade], 
+2021-07-20 15:04:20 0049      LinkRamoAtividade
+2021-07-20 15:04:20 0050 FROM [E:\teste_bi-master\loads\dataCloud\Dim_CNAE.qvd](qvd)
+2021-07-20 15:04:20      	5 campos encontrados: LinkEmpresa, CNAE - nu_ordem, Codigo Ramo de Atividade, Descricao Ramo de Atividade, LinkRamoAtividade, 
+2021-07-20 15:04:20      15,812 registros lidos
+2021-07-20 15:04:20 0052 Setor:
+2021-07-20 15:04:20 0053 LOAD [Descricao Setor Atividade], 
+2021-07-20 15:04:20 0054      [Divisao Setor], 
+2021-07-20 15:04:20 0055      LinkRamoAtividade
+2021-07-20 15:04:20 0056 FROM [E:\teste_bi-master\loads\dataCloud\Dim_Setor.qvd](qvd)
+2021-07-20 15:04:20      	3 campos encontrados: Descricao Setor Atividade, Divisao Setor, LinkRamoAtividade, 
+2021-07-20 15:04:20      87 registros lidos
+2021-07-20 15:04:20 0065 Fato_Empresas1:
+2021-07-20 15:04:20 0066 LOAD LinkEmpresa, 
+2021-07-20 15:04:20 0067      Latitude, 
+2021-07-20 15:04:20 0068      Longitude, 
+2021-07-20 15:04:20 0069      [Total Veiculos ANTT],
+2021-07-20 15:04:20 0070      if([Total Veiculos ANTT]='','Sem Registro ANTT','Com Registro ANTT') as FiltroANTT,
+2021-07-20 15:04:20 0071      [Total Veiculos Leves], 
+2021-07-20 15:04:20 0072      [Total Veiculos Pesados], 
+2021-07-20 15:04:20 0073      sum([Total Veiculos Leves])+sum([Total Veiculos Pesados]) as [Total Veiculos],
+2021-07-20 15:04:20 0074      if(sum([Total Veiculos Leves]+[Total Veiculos Pesados])<=5,'0 a 5', 
+2021-07-20 15:04:20 0075      	if(sum([Total Veiculos Leves]+[Total Veiculos Pesados])>5 and sum([Total Veiculos Leves]+[Total Veiculos Pesados])<=10,'6 a 10', 
+2021-07-20 15:04:20 0076      		if(sum([Total Veiculos Leves]+[Total Veiculos Pesados])>=11 and sum([Total Veiculos Leves]+[Total Veiculos Pesados])<=15,'11 a 15', 
+2021-07-20 15:04:20 0077      			if(sum([Total Veiculos Leves]+[Total Veiculos Pesados])>16 and sum([Total Veiculos Leves]+[Total Veiculos Pesados])<=30,'16 a 30', 
+2021-07-20 15:04:20 0078      				if(sum([Total Veiculos Leves]+[Total Veiculos Pesados])>31 and sum([Total Veiculos Leves]+[Total Veiculos Pesados])<=50,'31 a 50','>50'))))) as [Faixa de Veiculos],
+2021-07-20 15:04:20 0079      [Optante Simples?], 
+2021-07-20 15:04:20 0080      if([Optante Simples?]='1','Sim','Nao') as FiltroEmpresaSimples,
+2021-07-20 15:04:20 0081      if([Optante Simei?]='1','Sim','Nao') as FiltroEmpresaSimei,
+2021-07-20 15:04:20 0082      [Qtde Filial], 
+2021-07-20 15:04:20 0083      [Optante Simei?], 
+2021-07-20 15:04:20 0084      [Saude Tributaria], 
+2021-07-20 15:04:20 0085      [Nivel Atividade]
+2021-07-20 15:04:20 0086 FROM [E:\teste_bi-master\loads\dataCloud\Fato_Empresas.qvd](qvd)
+2021-07-20 15:04:20 0087 group by
+2021-07-20 15:04:20 0088 LinkEmpresa, 
+2021-07-20 15:04:20 0089      Latitude, 
+2021-07-20 15:04:20 0090      Longitude, 
+2021-07-20 15:04:20 0091      [Total Veiculos ANTT], 
+2021-07-20 15:04:20 0092      [Total Veiculos Leves], 
+2021-07-20 15:04:20 0093      [Total Veiculos Pesados], 
+2021-07-20 15:04:20 0094      [Optante Simples?], 
+2021-07-20 15:04:20 0095      [Qtde Filial], 
+2021-07-20 15:04:20 0096      [Optante Simei?], 
+2021-07-20 15:04:20 0097      [Saude Tributaria], 
+2021-07-20 15:04:20 0098      [Nivel Atividade]
+2021-07-20 15:04:20      	16 campos encontrados: LinkEmpresa, Latitude, Longitude, Total Veiculos ANTT, FiltroANTT, Total Veiculos Leves, Total Veiculos Pesados, Total Veiculos, Faixa de Veiculos, Optante Simples?, FiltroEmpresaSimples, FiltroEmpresaSimei, Qtde Filial, Optante Simei?, Saude Tributaria, Nivel Atividade, 
+2021-07-20 15:04:20      10,000 registros lidos
+2021-07-20 15:04:20 0100 left join (Fato_Empresas1)
+2021-07-20 15:04:20 0101 LOAD 
+2021-07-20 15:04:20 0102      LinkEmpresa, 
+2021-07-20 15:04:20 0103      upper([Empresa - Cidade]) &'|'& upper([Empresa - Estado]) as LinkMapa     
+2021-07-20 15:04:20 0104 FROM [E:\teste_bi-master\loads\dataCloud\Dim_Empresa.qvd](qvd)
+2021-07-20 15:04:20      	2 campos encontrados: LinkEmpresa, LinkMapa, 
+2021-07-20 15:04:20      10,000 registros lidos
+2021-07-20 15:04:20      Joining/Keeping
+2021-07-20 15:04:20 0106 Coordenadas:
+2021-07-20 15:04:20 0107 LOAD 
+2021-07-20 15:04:20 0108 	 upper(name) &'|'& upper(SiglaUF) as LinkMapa,
+2021-07-20 15:04:20 0109 	 ID, 
+2021-07-20 15:04:20 0110      SiglaUF, 
+2021-07-20 15:04:20 0111      CodMun, 
+2021-07-20 15:04:20 0112      CodUF, 
+2021-07-20 15:04:20 0113      name, 
+2021-07-20 15:04:20 0114      Capital, 
+2021-07-20 15:04:20 0115      coordinates, 
+2021-07-20 15:04:20 0116      coordinatesGoogle, 
+2021-07-20 15:04:20 0117      latitude, 
+2021-07-20 15:04:20 0118      longitude, 
+2021-07-20 15:04:20 0119      latitude_Uf, 
+2021-07-20 15:04:20 0120      longitude_Uf
+2021-07-20 15:04:20 0121 FROM [E:\teste_bi-master\files\dataMirrors\MunicipiosCoordenadasBrasil.qvd](qvd)
+2021-07-20 15:04:20      	13 campos encontrados: LinkMapa, ID, SiglaUF, CodMun, CodUF, name, Capital, coordinates, coordinatesGoogle, latitude, longitude, latitude_Uf, longitude_Uf, 
+2021-07-20 15:04:20      5,569 registros lidos
+2021-07-20 15:04:20 0126 max_zoom_level = 18
+2021-07-20 15:04:20 0129 var_lat_offset = '0'
+2021-07-20 15:04:20 0132 var_mid_lat = '=min(latitude)+(1+var_lat_offset)*((max(latitude)-min(latitude))/2)'
+2021-07-20 15:04:20 0135 var_mid_long = '=min(longitude)+(max(longitude)-min(longitude))/2'
+2021-07-20 15:04:20 0140 var_zoom = '=max(aggr(if(max( round(256*pow(2,(_zoom_level -1)))+(longitude *((256*pow(2,_zoom_level ))/360)) )-min( round(256*pow(2,(_zoom_level -1)))+(longitude *((256*pow(2,_zoom_level ))/360)) ) <map_size_x AND max((256*pow(2,(_zoom_level-1)))+((0.5*log((1+(sin((latitude)*pi()/180)))/(1-(sin((latitude)*pi()/180)))))*((-256*pow(2,_zoom_level))/(2*pi()))))-min((256*pow(2,(_zoom_level-1)))+((0.5*log((1+(sin((latitude)*pi()/180)))/(1-(sin((latitude)*pi()/180)))))*((-256*pow(2,_zoom_level))/(2*pi()))))<map_size_y,_zoom_level,1),_zoom_level))'
+2021-07-20 15:04:20 0143 var_maptype = '=if(isnull(only(maptype)),fieldvalue( '&chr(39)&'maptype'&chr(39)&', 1 ),maptype)'
+2021-07-20 15:04:20 0146 map_size_x = '640'
+2021-07-20 15:04:20 0147 map_size_y = '400'
+2021-07-20 15:04:20 0151 SET HidePrefix = '_'
+2021-07-20 15:04:20 0154 _zoom_level:
+2021-07-20 15:04:20 0155 LOAD
+2021-07-20 15:04:20 0156 RecNo( ) as _zoom_level
+2021-07-20 15:04:20 0157 autogenerate(max_zoom_level)
+2021-07-20 15:04:20      	1 campos encontrados: _zoom_level, 
+2021-07-20 15:04:20      18 registros lidos
+2021-07-20 15:04:20 0160 maptype:
+2021-07-20 15:04:20 0161 LOAD * INLINE [
+2021-07-20 15:04:20 0162 maptype
+2021-07-20 15:04:20 0163 roadmap
+2021-07-20 15:04:20 0164 mobile
+2021-07-20 15:04:20 0165 satellite
+2021-07-20 15:04:20 0166 terrain
+2021-07-20 15:04:20 0167 hybrid
+2021-07-20 15:04:20 0168 ]
+2021-07-20 15:04:20      	1 campos encontrados: maptype, 
+2021-07-20 15:04:20      5 registros lidos
+2021-07-20 15:04:20      Execução concluída.

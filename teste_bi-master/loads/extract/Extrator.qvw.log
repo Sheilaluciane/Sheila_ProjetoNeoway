@@ -1,0 +1,120 @@
+﻿2021-07-20 14:42:30      Execução iniciada.
+2021-07-20 14:42:30      QlikView Desktop Version      12.40.20100+2019-06-05 16:55:31+e65903c
+2021-07-20 14:42:30      CPU Target                    x64
+2021-07-20 14:42:30      Operating System              Windows Server 2016 Standard  (64 bit edition)
+2021-07-20 14:42:30      Wow64 mode                    Not using Wow64
+2021-07-20 14:42:30      Language                      0409 English English
+2021-07-20 14:42:30      Country                       USA United States United States
+2021-07-20 14:42:30      MDAC Version                  6.3.9600.16384
+2021-07-20 14:42:30      MDAC Full Install Version     6.3.9600.16384
+2021-07-20 14:42:30      PreferredCompression          2
+2021-07-20 14:42:30      EnableParallelReload          1
+2021-07-20 14:42:30      ParallelizeQvdLoads           1
+2021-07-20 14:42:30      AutoSaveAfterReload           0
+2021-07-20 14:42:30      BackupBeforeReload            0
+2021-07-20 14:42:30      EnableFlushLog                0
+2021-07-20 14:42:30      UserLogfileCharset            65001
+2021-07-20 14:42:30      OdbcLoginTimeout              -1
+2021-07-20 14:42:30      OdbcConnectionTimeout         -1
+2021-07-20 14:42:30      LongestPossibleLine           1048576
+2021-07-20 14:42:30      MaxCoreMask                   -1
+2021-07-20 14:42:30      WebFileTimeout                0
+2021-07-20 14:42:30      WebFileUserAgent              Mozilla/5.0
+2021-07-20 14:42:30      DontUseInternetCache          1
+2021-07-20 14:42:30      ScriptWantsDbWrite            false
+2021-07-20 14:42:30      ScriptWantsExe                false
+2021-07-20 14:42:30      ICU_FOR_CHARACTER_CLASSIFICATION true
+2021-07-20 14:42:30      ICU_FOR_CODE_PAGES            true
+2021-07-20 14:42:30      ICU_FOR_COLLATION             true
+2021-07-20 14:42:30      ICU_FOR_LOCALE_INFO           true
+2021-07-20 14:42:30      ICU_FOR_SUPPORT_INFO          true
+2021-07-20 14:42:30      ICU_FOR_TIME_ZONE_INFO        true
+2021-07-20 14:42:30      LogFile CodePage Used:        65001
+2021-07-20 14:42:30      UseMemoryFillPattern          1
+2021-07-20 14:42:30      ScriptMode                    Legacy (gives greater system access) (aka qv11 mode)
+2021-07-20 14:42:30      SequentialThreadCount         74
+2021-07-20 14:42:30      NumberOfCores (effective)     20
+2021-07-20 14:42:30      ReloadCodebase                Bnf
+2021-07-20 14:42:31      Reload ID                     16f7f5e4-f9cb-4807-ae08-7fff289892b4
+2021-07-20 14:42:31      Reload Executed By            QLIKVIEW\adminqlik1
+2021-07-20 14:42:31      Process Executing             QlikView Desktop
+2021-07-20 14:42:31      Process ID                    19124
+2021-07-20 14:42:31      Grpc version                  6.0.0
+2021-07-20 14:42:31      Protobuf version              3.6.1
+2021-07-20 14:42:31 0002 SET ThousandSep=','
+2021-07-20 14:42:31 0003 SET DecimalSep='.'
+2021-07-20 14:42:31 0004 SET MoneyThousandSep=','
+2021-07-20 14:42:31 0005 SET MoneyDecimalSep='.'
+2021-07-20 14:42:31 0006 SET MoneyFormat='$#,##0.00;-$#,##0.00'
+2021-07-20 14:42:31 0007 SET TimeFormat='h:mm:ss TT'
+2021-07-20 14:42:31 0008 SET DateFormat='M/D/YYYY'
+2021-07-20 14:42:31 0009 SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT'
+2021-07-20 14:42:31 0010 SET FirstWeekDay=6
+2021-07-20 14:42:31 0011 SET BrokenWeeks=1
+2021-07-20 14:42:31 0012 SET ReferenceDay=0
+2021-07-20 14:42:31 0013 SET FirstMonthOfYear=1
+2021-07-20 14:42:31 0014 SET CollationLocale='en-US'
+2021-07-20 14:42:31 0015 SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+2021-07-20 14:42:31 0016 SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December'
+2021-07-20 14:42:31 0017 SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+2021-07-20 14:42:31 0018 SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday'
+2021-07-20 14:42:31 0021 ODBC CONNECT TO *** (XUserId is ***, XPassword is ***)
+2021-07-20 14:42:32 0023 set ErrorMode = 1
+2021-07-20 14:42:32 0026 Empresa:
+2021-07-20 14:42:32 0027 LOAD
+2021-07-20 14:42:32 0028 	"cd_cep" 						as [Empresa - Cep],
+2021-07-20 14:42:32 0029     "cd_cnpj" 						as [Empresa - CNPJ],
+2021-07-20 14:42:32 0030     "cd_natureza_juridica" 			as [Empresa - Codigo Natureza Juridica],
+2021-07-20 14:42:32 0031     "de_classif_natureza_juridica" 	as [Empresa - Class Natureza Juridica],
+2021-07-20 14:42:32 0032     "de_natureza_juridica"  		as [Empresa - Descricao Natureza Juridica],
+2021-07-20 14:42:32 0033     "de_situacao" 					as [Empresa - Situacao],
+2021-07-20 14:42:32 0034     "dt_abertura" 					as [Empresa - Data Abertura],
+2021-07-20 14:42:32 0035     "fl_matriz"					 	as [Empresa - Filial/Matriz],
+2021-07-20 14:42:32 0036     "nm_bairro" 					as [Empresa - Bairro],
+2021-07-20 14:42:32 0037     "nm_logradouro" 				as [Empresa - Rua],
+2021-07-20 14:42:32 0038     "nm_municipio" 					as [Empresa - Cidade],
+2021-07-20 14:42:32 0039     "nm_razao_social" 				as [Empresa - Razao Social],
+2021-07-20 14:42:32 0040     "nu_logradouro" 				as [Empresa - Numero],
+2021-07-20 14:42:32 0041     "sg_uf" 						as [Empresa - Estado]
+2021-07-20 14:42:32 0042 SQL SELECT 
+2021-07-20 14:42:32 0043 	"cd_cep",
+2021-07-20 14:42:32 0044     "cd_cnpj",
+2021-07-20 14:42:32 0045     "cd_natureza_juridica",
+2021-07-20 14:42:32 0046     "de_classif_natureza_juridica",
+2021-07-20 14:42:32 0047     "de_natureza_juridica",
+2021-07-20 14:42:32 0048     "de_situacao",
+2021-07-20 14:42:32 0049     "dt_abertura",
+2021-07-20 14:42:32 0050     "fl_matriz",
+2021-07-20 14:42:32 0051     "nm_bairro",
+2021-07-20 14:42:32 0052     "nm_logradouro",
+2021-07-20 14:42:32 0053     "nm_municipio",
+2021-07-20 14:42:32 0054     "nm_razao_social",
+2021-07-20 14:42:32 0055     "nu_logradouro",
+2021-07-20 14:42:32 0056     "sg_uf"
+2021-07-20 14:42:32 0057 FROM MP11.dbo.empresas
+2021-07-20 14:42:32      	14 campos encontrados: Empresa - Cep, Empresa - CNPJ, Empresa - Codigo Natureza Juridica, Empresa - Class Natureza Juridica, Empresa - Descricao Natureza Juridica, Empresa - Situacao, Empresa - Data Abertura, Empresa - Filial/Matriz, Empresa - Bairro, Empresa - Rua, Empresa - Cidade, Empresa - Razao Social, Empresa - Numero, Empresa - Estado, 
+2021-07-20 14:42:32      10,000 registros lidos
+2021-07-20 14:42:32 0059 store Empresa into E:\teste_bi-master\files\dataMirrors\Empresa.qvd
+2021-07-20 14:42:32 0060 drop Table Empresa
+2021-07-20 14:42:32 0063 Setores:
+2021-07-20 14:42:32 0064 LOAD if(trim([Ramo de Atividade])='' or isnull([Ramo de Atividade]),peek('Ramo de Atividade'), [Ramo de Atividade]) as [Ramo de Atividade], 
+2021-07-20 14:42:32 0065      Divisões as [Setor - Divisoes], 
+2021-07-20 14:42:32 0066      [(DIVISÃO - 2digitos CNAE)] as LinkRamoAtividade
+2021-07-20 14:42:32 0067 FROM [E:\teste_bi-master\files\spreadsheets\Setores e Ramos de Atividade.csv]
+2021-07-20 14:42:32 0068 (txt, utf8, embedded labels, delimiter is ';', msq)
+2021-07-20 14:42:32      	3 campos encontrados: Ramo de Atividade, Setor - Divisoes, LinkRamoAtividade, 
+2021-07-20 14:42:32      87 registros lidos
+2021-07-20 14:42:32 0070 store Setores into E:\teste_bi-master\files\dataMirrors\Setores.qvd
+2021-07-20 14:42:32 0071 drop Table Setores
+2021-07-20 14:42:32 0074 CNAE:
+2021-07-20 14:42:32 0075 LOAD cd_cnpj, 
+2021-07-20 14:42:32 0076      nu_ordem, 
+2021-07-20 14:42:32 0077      cd_ramo_atividade, 
+2021-07-20 14:42:32 0078      de_ramo_atividade
+2021-07-20 14:42:32 0079 FROM [E:\teste_bi-master\files\spreadsheets\CNAE.csv]
+2021-07-20 14:42:32 0080 (txt, utf8, embedded labels, delimiter is ';', msq)
+2021-07-20 14:42:32      	4 campos encontrados: cd_cnpj, nu_ordem, cd_ramo_atividade, de_ramo_atividade, 
+2021-07-20 14:42:32      7,688 registros lidos
+2021-07-20 14:42:32 0082 store CNAE into E:\teste_bi-master\files\dataMirrors\CNAE.qvd
+2021-07-20 14:42:32 0083 drop Table CNAE
+2021-07-20 14:42:33      Execução concluída.

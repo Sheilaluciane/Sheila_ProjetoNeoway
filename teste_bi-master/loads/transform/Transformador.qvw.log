@@ -1,0 +1,85 @@
+﻿2021-07-20 14:56:41      Execução iniciada.
+2021-07-20 14:56:41      QlikView Desktop Version      12.40.20100+2019-06-05 16:55:31+e65903c
+2021-07-20 14:56:41      CPU Target                    x64
+2021-07-20 14:56:41      Operating System              Windows Server 2016 Standard  (64 bit edition)
+2021-07-20 14:56:41      Wow64 mode                    Not using Wow64
+2021-07-20 14:56:41      Language                      0409 English English
+2021-07-20 14:56:41      Country                       USA United States United States
+2021-07-20 14:56:41      MDAC Version                  6.3.9600.16384
+2021-07-20 14:56:41      MDAC Full Install Version     6.3.9600.16384
+2021-07-20 14:56:41      PreferredCompression          2
+2021-07-20 14:56:41      EnableParallelReload          1
+2021-07-20 14:56:41      ParallelizeQvdLoads           1
+2021-07-20 14:56:41      AutoSaveAfterReload           0
+2021-07-20 14:56:41      BackupBeforeReload            0
+2021-07-20 14:56:41      EnableFlushLog                0
+2021-07-20 14:56:41      UserLogfileCharset            65001
+2021-07-20 14:56:41      OdbcLoginTimeout              -1
+2021-07-20 14:56:41      OdbcConnectionTimeout         -1
+2021-07-20 14:56:41      LongestPossibleLine           1048576
+2021-07-20 14:56:41      MaxCoreMask                   -1
+2021-07-20 14:56:41      WebFileTimeout                0
+2021-07-20 14:56:41      WebFileUserAgent              Mozilla/5.0
+2021-07-20 14:56:41      DontUseInternetCache          1
+2021-07-20 14:56:41      ScriptWantsDbWrite            false
+2021-07-20 14:56:41      ScriptWantsExe                false
+2021-07-20 14:56:41      ICU_FOR_CHARACTER_CLASSIFICATION true
+2021-07-20 14:56:41      ICU_FOR_CODE_PAGES            true
+2021-07-20 14:56:41      ICU_FOR_COLLATION             true
+2021-07-20 14:56:41      ICU_FOR_LOCALE_INFO           true
+2021-07-20 14:56:41      ICU_FOR_SUPPORT_INFO          true
+2021-07-20 14:56:41      ICU_FOR_TIME_ZONE_INFO        true
+2021-07-20 14:56:41      LogFile CodePage Used:        65001
+2021-07-20 14:56:41      UseMemoryFillPattern          1
+2021-07-20 14:56:41      ScriptMode                    Legacy (gives greater system access) (aka qv11 mode)
+2021-07-20 14:56:41      SequentialThreadCount         74
+2021-07-20 14:56:41      NumberOfCores (effective)     20
+2021-07-20 14:56:41      ReloadCodebase                Bnf
+2021-07-20 14:56:41      Reload ID                     d2111d1c-1fff-46e2-a6e4-671f5d3be645
+2021-07-20 14:56:41      Reload Executed By            QLIKVIEW\adminqlik1
+2021-07-20 14:56:41      Process Executing             QlikView Desktop
+2021-07-20 14:56:41      Process ID                    19124
+2021-07-20 14:56:41      Grpc version                  6.0.0
+2021-07-20 14:56:41      Protobuf version              3.6.1
+2021-07-20 14:56:41 0002 SET ThousandSep=','
+2021-07-20 14:56:41 0003 SET DecimalSep='.'
+2021-07-20 14:56:41 0004 SET MoneyThousandSep=','
+2021-07-20 14:56:41 0005 SET MoneyDecimalSep='.'
+2021-07-20 14:56:41 0006 SET MoneyFormat='$#,##0.00;-$#,##0.00'
+2021-07-20 14:56:41 0007 SET TimeFormat='h:mm:ss TT'
+2021-07-20 14:56:41 0008 SET DateFormat='M/D/YYYY'
+2021-07-20 14:56:41 0009 SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT'
+2021-07-20 14:56:41 0010 SET FirstWeekDay=6
+2021-07-20 14:56:41 0011 SET BrokenWeeks=1
+2021-07-20 14:56:41 0012 SET ReferenceDay=0
+2021-07-20 14:56:41 0013 SET FirstMonthOfYear=1
+2021-07-20 14:56:41 0014 SET CollationLocale='en-US'
+2021-07-20 14:56:41 0015 SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec'
+2021-07-20 14:56:41 0016 SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December'
+2021-07-20 14:56:41 0017 SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun'
+2021-07-20 14:56:41 0018 SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday'
+2021-07-20 14:56:41 0021 CNAE_Temp:
+2021-07-20 14:56:41 0022 LOAD 
+2021-07-20 14:56:41 0023 cd_cnpj, 
+2021-07-20 14:56:41 0024 subfield(nu_ordem,'@',iterno()) 		 as nu_ordem,
+2021-07-20 14:56:41 0025 subfield(cd_ramo_atividade,'@',iterno()) as cd_ramo_atividade, 
+2021-07-20 14:56:41 0026 subfield(de_ramo_atividade,'@',iterno()) as de_ramo_atividade
+2021-07-20 14:56:41 0027 
+2021-07-20 14:56:41 0028 FROM [E:\teste_bi-master\files\dataMirrors\CNAE.qvd](qvd)
+2021-07-20 14:56:41 0029 while not isnull(subfield(nu_ordem,'@',iterno()))
+2021-07-20 14:56:41      	4 campos encontrados: cd_cnpj, nu_ordem, cd_ramo_atividade, de_ramo_atividade, 
+2021-07-20 14:56:41      15,812 registros lidos
+2021-07-20 14:56:41 0031 CNAE:
+2021-07-20 14:56:41 0032 LOAD
+2021-07-20 14:56:41 0033 cd_cnpj							  		 as [LinkEmpresa],
+2021-07-20 14:56:41 0034 PurgeChar(nu_ordem,'~') 		  		 as [CNAE - nu_ordem],
+2021-07-20 14:56:41 0035 PurgeChar(cd_ramo_atividade	,'~') 		 as [CNAE - Cod Ramo Atividade],
+2021-07-20 14:56:41 0036 PurgeChar(de_ramo_atividade,'~')  		 as [CNAE - Desc Ramo Atividade],
+2021-07-20 14:56:41 0037 left(PurgeChar(cd_ramo_atividade,'~'),2) as [LinkRamoAtividade]
+2021-07-20 14:56:41 0038 Resident CNAE_Temp
+2021-07-20 14:56:41      	5 campos encontrados: LinkEmpresa, CNAE - nu_ordem, CNAE - Cod Ramo Atividade, CNAE - Desc Ramo Atividade, LinkRamoAtividade, 
+2021-07-20 14:56:41      15,812 registros lidos
+2021-07-20 14:56:41 0039 store CNAE into E:\teste_bi-master\files\dataTransformed\CNAE.qvd
+2021-07-20 14:56:41 0041 drop Table CNAE_Temp
+2021-07-20 14:56:41 0043 exit SCRIPT
+2021-07-20 14:56:41      Execução concluída.
